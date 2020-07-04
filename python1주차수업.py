@@ -19,7 +19,7 @@
 # tmp.append(2)
 # tmp.append(3)
 
-# print(tmp) 배열/리스트
+# print(tmp) #배열/리스트
 
 # for i in range(0, 3):
 #     print(tmp[i]) for문
@@ -105,3 +105,6 @@
 
 # print("장학생수", count)
 # print("장학생의 최저평점", list[count-1])
+
+list = ["--*", "--*"]
+print(len(list))
