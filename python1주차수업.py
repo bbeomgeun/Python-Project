@@ -105,6 +105,3 @@
 
 # print("장학생수", count)
 # print("장학생의 최저평점", list[count-1])
-
-list = ["--*", "--*"]
-print(len(list))
