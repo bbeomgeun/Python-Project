@@ -30,3 +30,18 @@ API : 라이브러리의 다음 버전 느낌. 누구나 쉽게 갖다 사용할
 
   순서 : 디자이너로 만든다 -> py로 변환한다 -> 파이썬에서 불러와서 코드로 추가수정을 해준다.(리스너 추가)
    (하지만 코드양이 벅차므로 나눠준다) - GUIClass.py
+
+   위젯관련 사이트 (https://wikidocs.net/37458) 참고
+
+   레이아웃 = 적응형으로 구현할때(스페이서를 지정 안하면 화면사이즈에 맞게 늘어난다.)
+
+   urllib.request -> 웹 크롤링
+
+   hover ->마우스 올렸을 때 속성을 변경
+   pressed, released 
+
+    border-radius 
+
+   D-DAY 관련 메소드 : QDateTime 객체 사용
+   QDateTime은 QtCore에 소속. from PyQt5.QtCore import QDateTime 혹은 from PyQt5.QtCore import * 을 사용.
+   .daysTo(QDate)	현재 DateTime과 Parameter가 몇일 차이인지 알려줍니다. Parameter로 QDate 객체를 입력합니다.
