@@ -78,7 +78,7 @@ class Ui_MainWindow(object):
         self.page2_main = QtWidgets.QWidget()
         self.page2_main.setObjectName("page2_main")
         self.scrollArea = QtWidgets.QScrollArea(self.page2_main)
-        self.scrollArea.setGeometry(QtCore.QRect(190, 30, 741, 681))
+        self.scrollArea.setGeometry(QtCore.QRect(190, 30, 741, 731))
         self.scrollArea.setStyleSheet("background : rgb(48, 48, 48);\n"
 "background-attachment: scroll;\n"
 "")
@@ -86,90 +86,24 @@ class Ui_MainWindow(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollArea.setObjectName("scrollArea")
         self.scrollAreaWidgetContents = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 739, 679))
+        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 739, 729))
         self.scrollAreaWidgetContents.setObjectName("scrollAreaWidgetContents")
-        self.textEdit_7 = QtWidgets.QTextEdit(self.scrollAreaWidgetContents)
-        self.textEdit_7.setGeometry(QtCore.QRect(560, 140, 151, 51))
-        self.textEdit_7.setObjectName("textEdit_7")
-        self.widget_3 = QtWidgets.QWidget(self.scrollAreaWidgetContents)
-        self.widget_3.setGeometry(QtCore.QRect(59, 459, 611, 80))
-        self.widget_3.setStyleSheet("background : rgb(165, 165, 165)")
-        self.widget_3.setObjectName("widget_3")
-        self.checkBox_3 = QtWidgets.QCheckBox(self.widget_3)
-        self.checkBox_3.setGeometry(QtCore.QRect(560, 10, 41, 61))
-        self.checkBox_3.setText("")
-        self.checkBox_3.setObjectName("checkBox_3")
-        self.textEdit_11 = QtWidgets.QTextEdit(self.widget_3)
-        self.textEdit_11.setGeometry(QtCore.QRect(0, 0, 241, 31))
-        self.textEdit_11.setObjectName("textEdit_11")
-        self.progressBar_3 = QtWidgets.QProgressBar(self.widget_3)
-        self.progressBar_3.setGeometry(QtCore.QRect(0, 40, 461, 23))
-        self.progressBar_3.setProperty("value", 24)
-        self.progressBar_3.setTextVisible(True)
-        self.progressBar_3.setObjectName("progressBar_3")
-        self.textEdit_10 = QtWidgets.QTextEdit(self.scrollAreaWidgetContents)
-        self.textEdit_10.setGeometry(QtCore.QRect(209, 399, 41, 61))
-        self.textEdit_10.setObjectName("textEdit_10")
-        self.textEdit_9 = QtWidgets.QTextEdit(self.scrollAreaWidgetContents)
-        self.textEdit_9.setGeometry(QtCore.QRect(59, 399, 151, 61))
-        self.textEdit_9.setObjectName("textEdit_9")
-        self.textEdit_6 = QtWidgets.QTextEdit(self.scrollAreaWidgetContents)
-        self.textEdit_6.setGeometry(QtCore.QRect(59, 129, 151, 61))
-        self.textEdit_6.setObjectName("textEdit_6")
-        self.textEdit_5 = QtWidgets.QTextEdit(self.scrollAreaWidgetContents)
-        self.textEdit_5.setGeometry(QtCore.QRect(209, 129, 41, 61))
-        self.textEdit_5.setObjectName("textEdit_5")
-        self.widget = QtWidgets.QWidget(self.scrollAreaWidgetContents)
-        self.widget.setGeometry(QtCore.QRect(59, 189, 611, 80))
-        self.widget.setStyleSheet("background : rgb(165, 165, 165)")
-        self.widget.setObjectName("widget")
-        self.checkBox = QtWidgets.QCheckBox(self.widget)
-        self.checkBox.setGeometry(QtCore.QRect(560, 10, 41, 61))
-        self.checkBox.setText("")
-        self.checkBox.setObjectName("checkBox")
-        self.textEdit_4 = QtWidgets.QTextEdit(self.widget)
-        self.textEdit_4.setGeometry(QtCore.QRect(0, 0, 241, 31))
-        self.textEdit_4.setObjectName("textEdit_4")
-        self.progressBar = QtWidgets.QProgressBar(self.widget)
-        self.progressBar.setGeometry(QtCore.QRect(0, 40, 461, 23))
-        self.progressBar.setProperty("value", 70)
-        self.progressBar.setTextVisible(True)
-        self.progressBar.setObjectName("progressBar")
-        self.widget_4 = QtWidgets.QWidget(self.scrollAreaWidgetContents)
-        self.widget_4.setGeometry(QtCore.QRect(59, 559, 611, 80))
-        self.widget_4.setStyleSheet("background : rgb(165, 165, 165)")
-        self.widget_4.setObjectName("widget_4")
-        self.checkBox_4 = QtWidgets.QCheckBox(self.widget_4)
-        self.checkBox_4.setGeometry(QtCore.QRect(560, 10, 41, 61))
-        self.checkBox_4.setText("")
-        self.checkBox_4.setObjectName("checkBox_4")
-        self.textEdit_12 = QtWidgets.QTextEdit(self.widget_4)
-        self.textEdit_12.setGeometry(QtCore.QRect(0, 0, 241, 31))
-        self.textEdit_12.setObjectName("textEdit_12")
-        self.progressBar_4 = QtWidgets.QProgressBar(self.widget_4)
-        self.progressBar_4.setGeometry(QtCore.QRect(0, 40, 461, 23))
-        self.progressBar_4.setProperty("value", 24)
-        self.progressBar_4.setTextVisible(True)
-        self.progressBar_4.setObjectName("progressBar_4")
-        self.widget_2 = QtWidgets.QWidget(self.scrollAreaWidgetContents)
-        self.widget_2.setGeometry(QtCore.QRect(59, 289, 611, 80))
-        self.widget_2.setStyleSheet("background : rgb(165, 165, 165)")
-        self.widget_2.setObjectName("widget_2")
-        self.checkBox_2 = QtWidgets.QCheckBox(self.widget_2)
-        self.checkBox_2.setGeometry(QtCore.QRect(560, 10, 41, 61))
-        self.checkBox_2.setText("")
-        self.checkBox_2.setObjectName("checkBox_2")
-        self.textEdit_8 = QtWidgets.QTextEdit(self.widget_2)
-        self.textEdit_8.setGeometry(QtCore.QRect(0, 0, 241, 31))
-        self.textEdit_8.setObjectName("textEdit_8")
-        self.progressBar_2 = QtWidgets.QProgressBar(self.widget_2)
-        self.progressBar_2.setGeometry(QtCore.QRect(0, 40, 461, 23))
-        self.progressBar_2.setProperty("value", 24)
-        self.progressBar_2.setTextVisible(True)
-        self.progressBar_2.setObjectName("progressBar_2")
         self.textEdit_40 = QtWidgets.QTextEdit(self.scrollAreaWidgetContents)
-        self.textEdit_40.setGeometry(QtCore.QRect(60, 30, 511, 71))
+        self.textEdit_40.setGeometry(QtCore.QRect(11, 11, 717, 50))
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.textEdit_40.sizePolicy().hasHeightForWidth())
+        self.textEdit_40.setSizePolicy(sizePolicy)
+        self.textEdit_40.setMaximumSize(QtCore.QSize(16777215, 50))
         self.textEdit_40.setObjectName("textEdit_40")
+        self.gridLayoutWidget = QtWidgets.QWidget(self.scrollAreaWidgetContents)
+        self.gridLayoutWidget.setGeometry(QtCore.QRect(11, 68, 711, 651))
+        self.gridLayoutWidget.setObjectName("gridLayoutWidget")
+        self.main_gridLayout = QtWidgets.QGridLayout(self.gridLayoutWidget)
+        self.main_gridLayout.setContentsMargins(0, 0, 0, 0)
+        self.main_gridLayout.setVerticalSpacing(750)
+        self.main_gridLayout.setObjectName("main_gridLayout")
         self.scrollArea.setWidget(self.scrollAreaWidgetContents)
         self.verticalLayoutWidget_2 = QtWidgets.QWidget(self.page2_main)
         self.verticalLayoutWidget_2.setGeometry(QtCore.QRect(10, 29, 160, 681))
@@ -178,6 +112,12 @@ class Ui_MainWindow(object):
         self.verticalLayout_2.setContentsMargins(0, 0, 0, 0)
         self.verticalLayout_2.setObjectName("verticalLayout_2")
         self.text_hello = QtWidgets.QTextEdit(self.verticalLayoutWidget_2)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Maximum)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.text_hello.sizePolicy().hasHeightForWidth())
+        self.text_hello.setSizePolicy(sizePolicy)
+        self.text_hello.setMaximumSize(QtCore.QSize(16777215, 500))
         self.text_hello.setObjectName("text_hello")
         self.verticalLayout_2.addWidget(self.text_hello)
         self.pushButton = QtWidgets.QPushButton(self.verticalLayoutWidget_2)
@@ -374,29 +314,26 @@ class Ui_MainWindow(object):
         self.textEdit_35.setStyleSheet("color : white")
         self.textEdit_35.setObjectName("textEdit_35")
         self.textEdit_36 = QtWidgets.QTextEdit(self.scrollAreaWidgetContents_4)
-        self.textEdit_36.setGeometry(QtCore.QRect(30, 120, 121, 61))
+        self.textEdit_36.setGeometry(QtCore.QRect(30, 170, 171, 61))
         self.textEdit_36.setObjectName("textEdit_36")
-        self.textEdit_37 = QtWidgets.QTextEdit(self.scrollAreaWidgetContents_4)
-        self.textEdit_37.setGeometry(QtCore.QRect(30, 370, 231, 61))
-        self.textEdit_37.setObjectName("textEdit_37")
         self.textEdit_38 = QtWidgets.QTextEdit(self.scrollAreaWidgetContents_4)
-        self.textEdit_38.setGeometry(QtCore.QRect(30, 200, 171, 61))
+        self.textEdit_38.setGeometry(QtCore.QRect(30, 310, 171, 61))
         self.textEdit_38.setObjectName("textEdit_38")
         self.text_subject = QtWidgets.QLineEdit(self.scrollAreaWidgetContents_4)
-        self.text_subject.setGeometry(QtCore.QRect(220, 120, 221, 61))
+        self.text_subject.setGeometry(QtCore.QRect(220, 170, 221, 61))
+        self.text_subject.setStyleSheet("color : white")
         self.text_subject.setText("")
         self.text_subject.setObjectName("text_subject")
         self.text_date = QtWidgets.QLineEdit(self.scrollAreaWidgetContents_4)
-        self.text_date.setGeometry(QtCore.QRect(220, 200, 221, 61))
+        self.text_date.setGeometry(QtCore.QRect(220, 310, 221, 61))
+        self.text_date.setStyleSheet("color : white")
         self.text_date.setText("")
         self.text_date.setObjectName("text_date")
-        self.text_detail = QtWidgets.QLineEdit(self.scrollAreaWidgetContents_4)
-        self.text_detail.setGeometry(QtCore.QRect(30, 450, 571, 151))
-        self.text_detail.setText("")
-        self.text_detail.setObjectName("text_detail")
-        self.calendarWidget = QtWidgets.QCalendarWidget(self.scrollAreaWidgetContents_4)
-        self.calendarWidget.setGeometry(QtCore.QRect(450, 120, 351, 251))
-        self.calendarWidget.setObjectName("calendarWidget")
+        self.add_Calender = QtWidgets.QCalendarWidget(self.scrollAreaWidgetContents_4)
+        self.add_Calender.setGeometry(QtCore.QRect(40, 400, 351, 251))
+        self.add_Calender.setStyleSheet("background : white;\n"
+"color : black")
+        self.add_Calender.setObjectName("add_Calender")
         self.page5_toMain = QtWidgets.QPushButton(self.scrollAreaWidgetContents_4)
         self.page5_toMain.setGeometry(QtCore.QRect(610, 620, 161, 28))
         self.page5_toMain.setStyleSheet("color : white")
@@ -489,55 +426,6 @@ class Ui_MainWindow(object):
         self.Button_register.setText(_translate("MainWindow", "회원가입"))
         self.pushButton_3.setText(_translate("MainWindow", "카카오 로그인"))
         self.pushButton_2.setText(_translate("MainWindow", "네이버 로그인"))
-        self.textEdit_7.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'Gulim\'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:20pt; color:#f9f9f9;\">완료</span></p></body></html>"))
-        self.textEdit_11.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'Gulim\'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt; font-weight:600;\">- 팀 프로젝트 모임</span></p></body></html>"))
-        self.progressBar_3.setFormat(_translate("MainWindow", "%p-DAY"))
-        self.textEdit_10.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'Gulim\'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:24pt; font-weight:600; color:#fafafa;\">0</span></p></body></html>"))
-        self.textEdit_9.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'Gulim\'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:20pt; font-weight:600; color:#fcfcfc;\">● 약속</span></p></body></html>"))
-        self.textEdit_6.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'Gulim\'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:20pt; font-weight:600; color:#fcfcfc;\">● 과제</span></p></body></html>"))
-        self.textEdit_5.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'Gulim\'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:24pt; font-weight:600; color:#fafafa;\">0</span></p></body></html>"))
-        self.textEdit_4.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'Gulim\'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt; font-weight:600;\">- 파이썬 스터디 과제</span></p></body></html>"))
-        self.progressBar.setFormat(_translate("MainWindow", "%p-DAY"))
-        self.textEdit_12.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'Gulim\'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt; font-weight:600;\">- ~~~~~~~~</span></p></body></html>"))
-        self.progressBar_4.setFormat(_translate("MainWindow", "%p-DAY"))
-        self.textEdit_8.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'Gulim\'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt; font-weight:600;\">- ~~~~~~~~</span></p></body></html>"))
-        self.progressBar_2.setFormat(_translate("MainWindow", "%p-DAY"))
         self.textEdit_40.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
@@ -655,11 +543,6 @@ class Ui_MainWindow(object):
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:\'Gulim\'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:20pt; font-weight:600; color:#fcfcfc;\">- 제목</span></p></body></html>"))
-        self.textEdit_37.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'Gulim\'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:20pt; font-weight:600; color:#fcfcfc;\">- 세부 설명</span></p></body></html>"))
         self.textEdit_38.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"

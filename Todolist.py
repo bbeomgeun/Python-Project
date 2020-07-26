@@ -1,6 +1,6 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
-from PyQt5.QtWidgets import QMessageBox
-from PyQt5.QtCore import QDate
+from PyQt5.QtWidgets import QPushButton, QCheckBox, QProgressBar, QLineEdit, QWidget, QGridLayout
+from PyQt5.QtCore import QDate, Qt
 import MainTodo_ver1
 import time
 import sqlite3
@@ -15,13 +15,15 @@ class login_Page():
         self.window.stackedWidget.setCurrentWidget(self.window.page1_login)
         self.window.Button_LogIn.clicked.connect(self.LoginFunction)
         self.window.Button_register.clicked.connect(self.RegisterFunction)
+        # 비밀번호 *으로 바꾸기(setEchoMode)
+        self.window.text_PW.setEchoMode(2)
+
+        #self.window.text_hello.setText(self.ID + "님 안녕하세요!")
 
     def LoginFunction(self):
         print("clicked")
-
         self.ID = self.window.text_ID.text()
         self.PW = self.window.text_PW.text()
-
         self.cur.execute("SELECT * FROM user;")
         self.rows = self.cur.fetchall()
 
@@ -107,20 +109,42 @@ class stack_Page():
         self.window.stackedWidget.setCurrentWidget(self.window.page5_add)
 ###########################################################################################
 
-class TodoList():
+class TodoList(QWidget):
 #### method
     def __init__(self, ui):
+        super().__init__()
+
         self.window = ui
         self.window.stackedWidget.setCurrentWidget(self.window.page1_login)
-        #self.window.text_hello.setText(self.lc.ID + "님 안녕하세요!")
         self.current = QDate.currentDate()
-        self.dday = QDate.fromString("2020-07-24", "yyyy-MM-dd")
-        self.dday2 = QDate.fromString("2020-07-29", "yyyy-MM-dd")
-        self.interval = self.current.daysTo(self.dday)
-        self.interval2 = self.current.daysTo(self.dday2)
+        #self.dday = QDate.fromString("2020-07-24", "yyyy-MM-dd")
+        #self.interval = self.current.daysTo(self.dday)
+        self.position = 0
+        self.conn = sqlite3.connect("mydb.db")
+        self.cur = self.conn.cursor()
+        self.cur.execute("SELECT * FROM todo;")
+        self.rows = self.cur.fetchall()
+        for self.row in self.rows:
+            if self.row[2] == "1":
+                print(self.row)
+                self.dday = QDate.fromString(self.row[1], "yyyy-MM-dd")
+                self.interval = self.current.daysTo(self.dday)
+                chkBox = QCheckBox(self.row[0], self)
+                qcp = QProgressBar(self)
+                btn = QPushButton("Del..",self)
+                qcp.setValue(self.interval)
+                self.window.main_gridLayout.addWidget(chkBox,self.position,0)
+                self.window.main_gridLayout.addWidget(qcp,self.position,1)
+                self.window.main_gridLayout.addWidget(btn,self.position,2)
 
-        self.window.progressBar.setValue(self.interval)
-        self.window.progressBar_2.setValue(self.interval2)
+                print("finish")
+                self.position = self.position + 1
+
+    #             qcb.clicked.connect(lambda:self.del_qcbox(qc1,qcp,qcb))
+
+    # def del_qcbox(self,qc)
+    #     self.window.progressBar.setValue(self.interval)
+
 ###########################################################################################
 class MainWindow:
     def __init__(self, ui):
@@ -130,9 +154,25 @@ class AddTodo:
     def __init__(self,ui):
         self.window = ui
         self.currentAdd = QDate.currentDate()
-
-        self.window.add_currentDate.setText("오늘 날짜"+str(self.currentAdd))
+        self.window.add_currentDate.setText("Today : {0}".format(self.currentAdd.toString(Qt.DefaultLocaleLongDate)))
         
+        
+        self.status = '1'
+        self.window.add_Calender.clicked.connect(self.setDate)          #달력 선택되었을때 시그널
+        self.window.add_Calender.selectionChanged.connect(self.setDate) #다른 날짜 선택되었을때 시그널
+
+        self.window.date_save.clicked.connect(self.saveTodo)
+
+    def setDate(self): #선택 바뀔 때마다 setText해준다.
+        self.TodoDate = self.window.add_Calender.selectedDate()
+        self.window.text_date.setText("{0}".format(self.TodoDate.toString(Qt.DefaultLocaleLongDate)))
+
+    def saveTodo(self):
+        self.todo = self.window.text_subject.text()
+        self.conn = sqlite3.connect("mydb.db")
+        self.cur = self.conn.cursor()
+        self.cur.execute("INSERT INTO todo VALUES('"+ self.todo +"', '" + self.TodoDate.toString(Qt.ISODate) + "', '" + self.status + "');")
+        self.conn.commit()
 ###########################################################################################
 if __name__ == "__main__":
     import sys
@@ -140,8 +180,9 @@ if __name__ == "__main__":
     Form = QtWidgets.QMainWindow()        #main_win                       #기본설정
     ui = MainTodo_ver1.Ui_MainWindow()                      #MainTodo의 ui_MainWindow ( ui_form class을 ui에 담는다)
     ui.setupUi(Form)
-    gc = TodoList(ui)                                       #GUIClass 객체 생성(파라미터 ui)
-    lc = login_Page(ui)
-    sc = stack_Page(ui)
+    todoList = TodoList(ui) 
+    loginPage = login_Page(ui)
+    stackPage = stack_Page(ui)
+    addTodo = AddTodo(ui)
     Form.show()
     sys.exit(app.exec_())
