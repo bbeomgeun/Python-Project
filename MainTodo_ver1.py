@@ -98,12 +98,11 @@ class Ui_MainWindow(object):
         self.textEdit_40.setMaximumSize(QtCore.QSize(16777215, 50))
         self.textEdit_40.setObjectName("textEdit_40")
         self.gridLayoutWidget = QtWidgets.QWidget(self.scrollAreaWidgetContents)
-        self.gridLayoutWidget.setGeometry(QtCore.QRect(11, 68, 711, 651))
+        self.gridLayoutWidget.setGeometry(QtCore.QRect(10, 70, 721, 651))
         self.gridLayoutWidget.setObjectName("gridLayoutWidget")
-        self.main_gridLayout = QtWidgets.QGridLayout(self.gridLayoutWidget)
-        self.main_gridLayout.setContentsMargins(0, 0, 0, 0)
-        self.main_gridLayout.setVerticalSpacing(750)
-        self.main_gridLayout.setObjectName("main_gridLayout")
+        self.main_GridLayout = QtWidgets.QGridLayout(self.gridLayoutWidget)
+        self.main_GridLayout.setContentsMargins(0, 0, 0, 0)
+        self.main_GridLayout.setObjectName("main_GridLayout")
         self.scrollArea.setWidget(self.scrollAreaWidgetContents)
         self.verticalLayoutWidget_2 = QtWidgets.QWidget(self.page2_main)
         self.verticalLayoutWidget_2.setGeometry(QtCore.QRect(10, 29, 160, 681))
@@ -401,7 +400,7 @@ class Ui_MainWindow(object):
         MainWindow.setStatusBar(self.statusbar)
 
         self.retranslateUi(MainWindow)
-        self.stackedWidget.setCurrentIndex(4)
+        self.stackedWidget.setCurrentIndex(1)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):

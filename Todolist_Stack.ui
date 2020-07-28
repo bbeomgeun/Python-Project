@@ -21,7 +21,7 @@
        <string notr="true">background : white</string>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>2</number>
       </property>
       <widget class="QWidget" name="page1_login">
        <widget class="QWidget" name="verticalLayoutWidget">
@@ -203,17 +203,13 @@ p, li { white-space: pre-wrap; }
          <widget class="QWidget" name="gridLayoutWidget">
           <property name="geometry">
            <rect>
-            <x>11</x>
-            <y>68</y>
-            <width>711</width>
+            <x>10</x>
+            <y>70</y>
+            <width>721</width>
             <height>651</height>
            </rect>
           </property>
-          <layout class="QGridLayout" name="main_gridLayout">
-           <property name="verticalSpacing">
-            <number>750</number>
-           </property>
-          </layout>
+          <layout class="QGridLayout" name="main_GridLayout"/>
          </widget>
         </widget>
        </widget>

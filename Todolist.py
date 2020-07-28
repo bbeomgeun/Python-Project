@@ -120,6 +120,7 @@ class TodoList(QWidget):
         #self.dday = QDate.fromString("2020-07-24", "yyyy-MM-dd")
         #self.interval = self.current.daysTo(self.dday)
         self.position = 0
+        # self.max = 31
         self.conn = sqlite3.connect("mydb.db")
         self.cur = self.conn.cursor()
         self.cur.execute("SELECT * FROM todo;")
@@ -133,17 +134,23 @@ class TodoList(QWidget):
                 qcp = QProgressBar(self)
                 btn = QPushButton("Del..",self)
                 qcp.setValue(self.interval)
-                self.window.main_gridLayout.addWidget(chkBox,self.position,0)
-                self.window.main_gridLayout.addWidget(qcp,self.position,1)
-                self.window.main_gridLayout.addWidget(btn,self.position,2)
-
-                print("finish")
+                # qcp.setMaximum(self.max)
+                qcp.setFormat("%p-DAY")
+                self.window.main_GridLayout.addWidget(chkBox,self.position,0)
+                self.window.main_GridLayout.addWidget(qcp,self.position,1)
+                self.window.main_GridLayout.addWidget(btn,self.position,2)
                 self.position = self.position + 1
+                print("finish")
+        
 
-    #             qcb.clicked.connect(lambda:self.del_qcbox(qc1,qcp,qcb))
+        qcb.clicked.connect(lambda:self.del_qcbox(qc1,qcp,qcb))
 
-    # def del_qcbox(self,qc)
-    #     self.window.progressBar.setValue(self.interval)
+    def del_qcbox(self,qc)
+        qc.deleteLater()
+        qb.deleteLater()
+        self.position = self.position - 1
+
+
 
 ###########################################################################################
 class MainWindow:
