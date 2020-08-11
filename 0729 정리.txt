@@ -1,0 +1,32 @@
+0729
+
+DB에 이미지 넣는 방법
+1. binary로 바꿔서 넣기
+2. 서버에 이미지를 저장하고 이미지 경로를 올린다. (내 컴퓨터에 로컬경로 넣기) - 하드디스크가 서버느낌
+
+크롤링의 원리
+특정 url을 주고 파싱해오면 된다.
+
+파이썬에서 전체화면크기나 마우스 위치를 구할 수 있다.
+
+Selenium - BeautifulSoup의 단점
+ : 자바스크립트를 통한 동적처리는 반영 못함
+
+브라우저가 서버에게 웹페이지 요청 -> 소스를 받아옴(BeautifulSoup)은 여기까지
+추가적인 자바스크립트 작업 -> 우리가 보는 웹페이지 완성(Selenium)
+
+primaryScreen함수 = screen객체 반환
+grabWindow함수(프로그램의 ID)를 파라미터로
+QtWidgets.Qapplication.clipboard()
+
+순열, 조합 사용법
+-from itertools import combinations, permutations
+1st = list(combinations([1,2,3,4,5], 2))
+
+pixamap - 이미지 동적으로 담는 위젯
+
+
+
+++ 삭제가 작동을 잘 안한다
+달력도 할 수 있으면 해오기
+카테고리 추가해오기

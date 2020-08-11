@@ -1,0 +1,75 @@
+add item - QlineEdit에 입력된 텍스트를 바탕으로 QCheckBox를 생성
+Del - 그 열에 있는 qcheckbox를 삭제
+
+connect안에 함수 적을때 괄호를 적으면 함수의 끝에 괄호를 넣으면 함수를 실행한다는 의미로 
+connect안에는 함수 자체를 넣어야함.
+따라서 람다함수로 구현할 예정
+
+그리드레이아웃에 0.0 0.1 0.2로 해서 받은 데이터를 띄우고
+다음 데이터를 추가할떄 열+1, 삭제할때 열-1로 해준다. -> 그 데이터를 페이지 옮기는 형식으로
+
++++0725
+데이터베이스에 저장할때 이름, 날짜(YYYY-MM-DD), STATUS해서
+default로 status를 0으로, 완료버튼이 눌리면 1으로 바꾸기
+그래서 메인에서 띄울때 status == 0인것만 for문돌려서 차례로 띄우고
+1인 것은 완료창에서 status == 1인것만 차례로 띄우기
+
+갯수는 디비에서 select count(*) from Orders where status == 1
+
+++++0727
+체크버튼누르면 체크버튼내용으로 select해서 그 row[2]의 값(status)==0으로 만들기
+del버튼 누르면 위젯
+qc.deleteLater()
+qb.deleteLater()
+및 sql에서 삭제(검색을 어떻게 할지 강구)
+
+++gridLayout.addWidget( 추가할위젯, row , col , 몇줄 점유할까, 몇칸 점유할까 )
+https://m.blog.naver.com/PostView.nhn?blogId=mandori21&logNo=220369814730&proxyReferer=https:%2F%2Fwww.google.com%2F
+
+++++ 0728 디비 쿼리 작성할때 conn.commit() 해야 반영 & ' ' 이거 조심
+
+++++ 0729 띄워주는 행위를 update함수나 클래스로 만들면 좋겠다는 생각
+ - 체크되었을때 status 0으로 바뀌고 del 버튼 눌러서 삭제했을때도 디비에서 삭제
+ - add되었을때도 디비에 추가되고 메인에 업데이트되야함
+ -> 이 행위때마다 업데이트해주는 코드가 필요
+
+for i in reversed(range(self.Ateammem.count())):
+	self.layout.itemAt(i).widget().setParent(None)
+ - 카운트만큼 for을 돌면서 setParent(none)하면 위젯삭제 참고
+
++한 것
+비밀번호 *으로 바꾸기 (완료)
+달력이벤트를 통해서 db에 할일 목록 추가하기(완료)
+gridlayout을 통해서 메인에 띄우기
+
+
+현재시간받아와서 이번달 달력을 테이블로 만든다음에
+이걸 기준으로 사용자가 페이지넘길때마다 달력을 그때그때 만들어주는방식
+ -> 테이블위젯? qtable 위젯으로 달력페이지 만든다음에 데이터를 넣고 <- -> 해서 다음달 저번달 데이터바꾸기
+
+타이틀바 클래스가 따로 있는지?
+따로 QWidget를 만들어서 새거로 만들겠다.
+
+-호버-
+QPushButton:hover(background-color: rgb(xxx,xxx,xxx) 구현하기
+
+버튼누르면 접고 피고 -> 위젯의 길이를 줄이는 방식으로 없앴다.
+QPixmap을 이용해서 
+self.xx = QPIXMAP()
+self.qpixmap.load(row[??]) 디비에서 가져오는법
+
+디비따로 가져오는법(각 카테고리에 있는 디비를 각자 가져오는법)
+인덱스를 두개 만들어서 그 인덱스만 긁어와서 보여주면 된다.
+테이블을 두 개 만들면 된다.
+
+decorator -> 이 함수가 작동된다음에 바로 다음 함수가 움직이면 좋겠다 싶을때 사용
+
+함수 하나 설정 후
+함수 인자로 함수를 받는다
+@checkArrowStatus
+
+from parse import compile(pip install parse)
+
+??님이 입장하셨습니다.시 ??만 리스트에 추가(parse 이용)
+
+stretch

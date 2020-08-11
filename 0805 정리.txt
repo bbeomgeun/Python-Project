@@ -1,0 +1,8 @@
+row in rows로 하나씩 
+lambda title = row[1] : self.showInfo(title);
+
+showInfo는 grid에 add하면서
+self.lambda(
+
+self.connect(button3, SIGNAL("clicked()"),
+    lambda who="Three": self.anyButton(who))
