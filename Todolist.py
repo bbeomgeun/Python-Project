@@ -126,18 +126,22 @@ class TodoList(QWidget):
             if self.row[2] == "1":
                 self.add_todo(self.row[0], self.row[1])
 
-        self.window.button_finish.clicked.connect(lambda : self.updateUI_finish())
-        self.window.page3_toMain.clicked.connect(lambda : self.updateUI_main())
+        self.window.button_finish.clicked.connect(lambda : self.updateUI_finish()) #완료버튼시 finish_gridlayout update
+        self.window.page3_toMain.clicked.connect(lambda : self.updateUI_main()) #메인버튼시 mainlayout update
     
     def add_todo(self, text, date):
         self.current = QDate.currentDate()
         self.dday = QDate.fromString(date, "yyyy-MM-dd")
         self.interval = self.current.daysTo(self.dday)
+        self.progressbarValue = 100-self.interval # progressbar는 value에 맞춰서 그래픽이 구현 -> d-day는 남은 날짜로 그래프진행상태 표시이므로 빼준다
         chkbtn = QPushButton(text, self)
         qcp = QProgressBar(self)
         btn = QPushButton("Del..",self)
-        qcp.setValue(self.interval)
-        qcp.setFormat("%p-DAY")
+        qcp.setValue(self.progressbarValue) 
+        qcp.setFormat(str(self.interval) + "-DAY") # 실제 표시해주는 data는 interval 그대로
+        if (self.interval <= 5):                #d-day(interval)이 5일 이내라면 붉은색으로
+            qcp.setStyleSheet("QProgressBar::chunk {background-color : red;}") # stylesheet 바꿔준다.
+            ## d-day가 표시되던 defaultFormat이 깨진다(색을 바꿨더니) -> 고치기
         self.window.main_GridLayout.addWidget(chkbtn,self.position,0)
         self.window.main_GridLayout.addWidget(qcp,self.position,1)
         self.window.main_GridLayout.addWidget(btn,self.position,2)
@@ -150,11 +154,14 @@ class TodoList(QWidget):
         self.current = QDate.currentDate()
         self.dday = QDate.fromString(date, "yyyy-MM-dd")
         self.interval = self.current.daysTo(self.dday)
+        self.progressbarValue = 100-self.interval
         chkbtn = QPushButton(text, self)
         qcp = QProgressBar(self)
         btn = QPushButton("Del..",self)
-        qcp.setValue(self.interval)
-        qcp.setFormat("%p-DAY")
+        qcp.setValue(self.progressbarValue)
+        qcp.setFormat(str(self.interval) + "-DAY")
+        if (self.interval <= 5):                #d-day(interval)이 5일 이내라면 붉은색으로
+            qcp.setStyleSheet("QProgressBar::chunk {background-color : red;}") # stylesheet 바꿔준다.
         self.window.finish_GridLayout.addWidget(chkbtn,self.finish_position,0)
         self.window.finish_GridLayout.addWidget(qcp,self.finish_position,1)
         self.window.finish_GridLayout.addWidget(btn,self.finish_position,2)
